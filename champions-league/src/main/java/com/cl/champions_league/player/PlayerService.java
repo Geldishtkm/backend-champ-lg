@@ -59,20 +59,6 @@ public class PlayerService {
         return playerRepository.save(player);
     }
 
-    public Player updatePlayer(Player updatedPlayer) {
-        Optional<Player> existingPlayer = playerRepository.findByName(updatedPlayer.getName());
-
-        if (existingPlayer.isPresent()) {
-            Player playerToUpdate = existingPlayer.get();
-            playerToUpdate.setName(updatedPlayer.getName());
-            playerToUpdate.setTeamName(updatedPlayer.getTeamName());
-            playerToUpdate.setPos(updatedPlayer.getPos());
-            playerToUpdate.setNation(updatedPlayer.getNation());
-            playerRepository.save(playerToUpdate);
-            return playerToUpdate;
-        }
-        return null;
-    }
 
     @Transactional
     public void deletePlayer(String playerName) {
