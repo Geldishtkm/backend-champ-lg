@@ -1,0 +1,27 @@
+  databaseChangeLog:
+    - changeSet:
+        id: 1
+        author: geldi
+        changes:
+          - createTable:
+              tableName: player
+              columns:
+                - column:
+                    name: id
+                    type: SERIAL
+                    constraints:
+                      primaryKey: true
+                - column:
+                    name: name
+                    type: VARCHAR(100)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: nation
+                    type: VARCHAR(100)
+                - column:
+                    name: pos
+                    type: VARCHAR(50)
+                - column:
+                    name: team_name
+                    type: VARCHAR(100)

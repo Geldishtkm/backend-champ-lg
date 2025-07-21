@@ -47,15 +47,6 @@ public class PlayerController {
         return new ResponseEntity<>(createdPlayer, HttpStatus.CREATED);
     }
 
-    @PutMapping
-    public ResponseEntity<Player> updatePlayer(@RequestBody Player updatedPlayer) {
-        Player resultPlayer = playerService.updatePlayer(updatedPlayer);
-        if (resultPlayer != null) {
-            return new ResponseEntity<>(resultPlayer, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
 
     @DeleteMapping("/{playerName}")
     public ResponseEntity<String> deletePlayer(@PathVariable String playerName) {
