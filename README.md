@@ -94,11 +94,6 @@ A Spring Boot RESTful web service providing access to detailed player statistics
 
 * Easily deployable on [Railway](https://railway.app)
 * Database hosted on Railway PostgreSQL
-* Docker support (optional)
-
-## 📸 Screenshots / Demo (Optional)
-
-Add GIFs, screenshots, or demo video links if available.
 
 ## 📚 Liquibase
 
@@ -112,7 +107,7 @@ src/main/resources/db/changelog/db.changelog-master.yaml
 
 * Add rate limiting with Bucket4j
 * Add asynchronous job handling for scraping or analytics
-* Integrate CI/CD (GitHub Actions)
+* Integrate CI/CD
 
 ---
 
