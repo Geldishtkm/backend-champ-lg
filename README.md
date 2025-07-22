@@ -105,9 +105,9 @@ src/main/resources/db/changelog/db.changelog-master.yaml
 
 ## 📌 Future Improvements
 
-* Add rate limiting with Bucket4j
-* Add asynchronous job handling for scraping or analytics
-* Integrate CI/CD
+* Adding rate limiting with Bucket4j
+* Adding asynchronous job handling for scraping or analytics
+* Integrating CI/CD
 
 ---
 
