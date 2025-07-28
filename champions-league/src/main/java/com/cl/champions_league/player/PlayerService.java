@@ -54,11 +54,6 @@ public class PlayerService {
     }
 
 
-    @Transactional
-    public void deletePlayer(String playerName) {
-        playerRepository.deleteByName(playerName);
-    }
-
     // === NEW METHOD FOR THE TRUE OR FALSE GAME ===
 
     /**

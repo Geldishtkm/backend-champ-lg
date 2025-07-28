@@ -46,11 +46,6 @@ public class PlayerController {
     }
 
 
-    @DeleteMapping("/{playerName}")
-    public ResponseEntity<String> deletePlayer(@PathVariable String playerName) {
-        playerService.deletePlayer(playerName);
-        return new ResponseEntity<>("Player deleted successfully", HttpStatus.OK);
-    }
 
     @GetMapping("/game/random")
     public ResponseEntity<Map<String, Object>> getRandomPlayerForGame() {
