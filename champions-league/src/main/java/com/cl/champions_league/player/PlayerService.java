@@ -1,6 +1,5 @@
 package com.cl.champions_league.player;
 
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -43,11 +42,6 @@ public class PlayerService {
                 .collect(Collectors.toList());
     }
 
-    public List<Player> getPlayersByTeamAndPosition(String team, String position){
-        return playerRepository.findAll().stream()
-                .filter(player -> team.equals(player.getTeamName()) && position.equals(player.getPos()))
-                .collect(Collectors.toList());
-    }
 
     public Player addPlayer(Player player) {
         return playerRepository.save(player);

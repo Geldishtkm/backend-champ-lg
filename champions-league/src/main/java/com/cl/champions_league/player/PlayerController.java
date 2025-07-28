@@ -22,13 +22,10 @@ public class PlayerController {
     @GetMapping
     public List<Player> getPlayers(
             @RequestParam(required = false) String team,
-            @RequestParam(required = false) String name,
             @RequestParam(required = false) String position,
             @RequestParam(required = false) String nation) {
 
-        if (team != null && position != null) {
-            return playerService.getPlayersByTeamAndPosition(team, position);
-        } else if (team != null) {
+        if (team != null) {
             return playerService.getPlayersFromTeam(team);
         } else if (position != null) {
             return playerService.getPlayersByPos(position);
@@ -38,14 +35,6 @@ public class PlayerController {
             return playerService.getPlayers();
         }
     }
-
-    @PostMapping
-    public ResponseEntity<Player> addPlayer(@RequestBody Player player) {
-        Player createdPlayer = playerService.addPlayer(player);
-        return new ResponseEntity<>(createdPlayer, HttpStatus.CREATED);
-    }
-
-
 
     @GetMapping("/game/random")
     public ResponseEntity<Map<String, Object>> getRandomPlayerForGame() {
