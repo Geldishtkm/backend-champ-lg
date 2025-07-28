@@ -30,11 +30,6 @@ public class PlayerService {
                 .collect(Collectors.toList());
     }
 
-    public List<Player> getPlayersByName(String searchText) {
-        return playerRepository.findAll().stream()
-                .filter(player -> player.getName().toLowerCase().contains(searchText.toLowerCase()))
-                .collect(Collectors.toList());
-    }
 
     public List<Player> getPlayersByPos(String searchText) {
         return playerRepository.findAll().stream()

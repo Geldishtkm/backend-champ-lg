@@ -30,8 +30,6 @@ public class PlayerController {
             return playerService.getPlayersByTeamAndPosition(team, position);
         } else if (team != null) {
             return playerService.getPlayersFromTeam(team);
-        } else if (name != null) {
-            return playerService.getPlayersByName(name);
         } else if (position != null) {
             return playerService.getPlayersByPos(position);
         } else if (nation != null) {
